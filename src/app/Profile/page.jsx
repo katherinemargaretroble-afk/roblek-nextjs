@@ -18,7 +18,6 @@ export default function ProfilePage() {
         style={styles.avatar}
       />
 
-      {/* Toggle between viewing and editing the name */}
       {isEditing ? (
         <div style={{ margin: "16px 0" }}>
           <input
@@ -42,7 +41,7 @@ export default function ProfilePage() {
 
       <p style={{ color: "#666", fontSize: "14px" }}>Role: Administrator</p>
 
-      {/* router.push("/login") is safer than router.back() */}
+
       <button onClick={() => router.push("/login")} style={styles.logoutBtn}>
         Back to Login
       </button>
@@ -50,7 +49,7 @@ export default function ProfilePage() {
   );
 }
 
-// Clean inline styles kept at the bottom so the JSX stays easy to read
+
 const styles = {
   card: {
     maxWidth: "360px",
