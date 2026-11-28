@@ -3,24 +3,24 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-// Part 3.1: Hardcoded valid credentials
+
 const VALID_USERNAME = "Katherine Margaret Roble";
 const VALID_PASSWORD = "Roble@123";
 
 export default function LoginPage() {
   const router = useRouter();
 
-  // Part 2.2: Username and password states
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // Part 3.2: Error state
+  
   const [error, setError] = useState("");
 
-  // Part 5.1: Show password state
+  
   const [showPassword, setShowPassword] = useState(false);
 
-  // Part 3.3 & Part 4: Validation and navigation
+ 
   const handleLogin = (e) => {
     e.preventDefault(); // Prevents page reload on Enter key
 
@@ -51,7 +51,7 @@ export default function LoginPage() {
           <p style={styles.subtitle}>Sign in to access your profile</p>
         </div>
 
-        {/* Username Input */}
+       
         <div style={styles.field}>
           <label style={styles.label}>Username</label>
           <input
@@ -63,7 +63,7 @@ export default function LoginPage() {
           />
         </div>
 
-        {/* Password Input */}
+     
         <div style={styles.field}>
           <label style={styles.label}>Password</label>
           <input
@@ -75,7 +75,7 @@ export default function LoginPage() {
           />
         </div>
 
-        {/* Part 5.3: Show Password Checkbox */}
+       
         <div style={styles.checkboxRow}>
           <label style={styles.checkboxLabel}>
             <input
@@ -88,10 +88,10 @@ export default function LoginPage() {
           </label>
         </div>
 
-        {/* Part 3.5: Display error only when it exists */}
+        
         {error && <div style={styles.errorBox}>{error}</div>}
 
-        {/* Login Button */}
+       
         <button type="submit" style={styles.button}>
           Login
         </button>
@@ -100,7 +100,7 @@ export default function LoginPage() {
   );
 }
 
-// Clean inline styles matching your Profile Page design
+
 const styles = {
   page: {
     minHeight: "100vh",
